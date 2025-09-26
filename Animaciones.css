@@ -1,0 +1,107 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./img/Fondo.jpg);
+  background-size: contain;
+  position: relative;
+}
+
+.fondo-move {
+  animation: fondo 10s linear infinite;
+}
+
+.carro {
+  position: absolute;
+  bottom: 50px;
+  width: 300px;
+}
+
+.llanta1 {
+  width: 80px;
+  position: absolute;
+  top: 550px;
+  right: 570px;
+  ;
+}
+
+.llanta-move {
+  animation: girar 3s linear infinite
+}
+
+.llanta2 {
+  width: 80px;
+  position: absolute;
+  top: 550px;
+  left: 550px;
+
+}
+
+.llanta-move {
+  animation: girar 3s linear infinite
+}
+
+.polvo {
+  background-image: url(./img/polvo.png);
+  width: 157.2px;
+  height: 61px;
+  position: absolute;
+  top: 560px;
+  left: 420px;
+}
+
+.polvo-move {
+  animation: polvo-movimiento 1s steps(5) infinite;
+
+}
+
+/* position absolute es para moverlo como quiera, si el container tiene relative al demas les pongo absolute y al reves*/
+
+.luz {
+  top: 500px;
+  right: 340px;
+  position: absolute;
+}
+.ocultoluz {
+  display: none;
+}
+
+.luz-move {
+  animation: luz 2s linear infinite;
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes fondo {
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes girar {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes polvo-movimiento {
+  100% {
+    background-position-x: 786px;
+  }
+}
+
+@keyframes luz {
+  100% {
+    opacity: 0;
+  }
+}
